@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Foss4g 2011 Mapnik Workshop</title>
+
+    <!-- shamelessly stolen from github for nice calm look -->
+    <link href="documentation.css" media="screen" rel="stylesheet" type="text/css">    
+    <link href="screen.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="documentation.js" type="text/javascript"></script>
+    <script type="text/javascript" src="showdown.js"></script>
+    <script type="text/javascript" src="preview.js"></script>    
+  </head>
+ 
+  <body>
+      <div id="header-wrapper">
+        <div id="header" class="basic" >
+          <div class="site">
+              <a class ="logo" href="http://mapnik.org">
+
+              </a>
+          </div><!-- .site -->
+        </div><!-- /#header .basic -->
+      </div><!-- /#header-wrapper -->
+
+      <div id="wrapper">
+
+        <div id="content" class="site">
+
+          <div class="content">
+         
+            <h0>Foss4g 2011 Mapnik Workshop</h0>
+            <h2>Leveraging Mapnik for fast and beautiful maps</h2>
+
+
+            <div id="result"></div>
+
+
+          </div><!-- /.content -->
+          
+          <div class="sidebar">
+           
+              <h2>Tools</h2>
+              <div style="margin:100">
+              
+              <a href="http://www.ubuntu.com/"><img src="ubuntu.png" /></a>
+              <br/>
+              <a href="http://python.org"><img src="python-logo.gif" /></a>
+              <br/>
+              <a href="http://nodejs.org/"><img src="nodejs-green.png" /></a>
+              <br/>
+              <a href="http://mapnik.org"><img src="mapnik-logo.png" /></a>
+              <br/>
+              <a href="http://tilemill.com"><img src="tilemill.png" /></a>
+
+              </div>
+
+              <hr />
+              <h2>Follow News</h2>
+                <a href="http://twitter.com/#!/mapbox">http://twitter.com/#!/mapbox</a>
+                <a href="http://twitter.com/#!/mapnikproject">
+                http://twitter.com/#!/mapnikproject</a>
+
+
+
+
+<p>
+<textarea 
+  style="visibility:hidden" 
+  id="user_input"
+>
+
+
+# Introductions
+
+ * About [Dane Springmeyer](https://twitter.com/#!/springmeyer) and [Iván Sánchez Ortega](https://twitter.com/#!/Realivansanchez)
+
+ * Checkin with participants on abilities, shared interests, where we are headed during next three hours
+
+
+
+# Take homes
+
+Beaty and speed are not mutually exclusive
+
+Learn Python and Javacript ([Node.js](http:://nodejs.org)), even a little
+
+Web servers should be fun to use and even write (not just apache configuration)
+
+Mapnik is a toolkit for building applications not a solution
+
+[TileMill](http://tilemill.com) is a open source solution for cartographic design and map tiles
+
+[TileStream](http://tiles.mapbox.com) is an open source solution and a hosted service for serving mbtiles (static caches)
+
+There is no single solution yet for dynamic rendering of fast maps
+
+Get help after workshop at [support.mapbox.com](http://support.mapbox.com/) and #mapnik and #mapbox
+
+# Breakdown
+
+Introduction
+
+Setup
+
+Discuss Schedule
+
+Part 1: Mapnik programmatically
+
+Part 2: TileMill and Carto
+
+Break - experiment
+
+Part 3: Slow Maps / Fast Maps
+
+Part 4: Deploying your maps
+
+
+# Setup
+
+Open VirtualBox and boot the "Mapnik-Foss4g" VM - download it from [support.mapbox.com](http://support.mapbox.com/kb/introduction-installation/tilemill-virtualbox-vm)
+
+Basics of VirtualBox:
+
+* Seamless mouse integration works using "guess additions"
+* user:pass of mapnik:mapnik
+
+Open a browser on windows/ubuntu and sign into [webchat](http://webchat.freenode.net/). We will use IRC chat to share ideas with the group, ask questions, and distribute links.
+
+![webconnect](webconnect.png)
+
+Extra credit: Sign up for a [github account](http://github.com) to be able to share code snippets.
+
+![github](https://a248.e.akamai.net/assets.github.com/images/modules/header/logov6-hover.svg)
+
+
+ 
+# Part 1: Mapnik programmatically
+
+Ivan lead.
+
+We will learn basic command line and python skills to create a first map with Mapnik: http://trac.mapnik.org/wiki/GettingStarted
+
+Basics of Mapnik as API:
+
+    import mapnik2
+    m = mapnik2.Map(256,256)
+    mapnik2.render_to_file(m,"tile.png")
+
+
+# Part 2: TileMill and Carto - the future
+
+Dane lead.
+
+It is already running on the VM - but how does install work?
+
+General introductional lecture: [Intro to TileMill slides](foss4g2011-lecture1-tilemill.pdf).
+
+TileMill is [running live](http://localhost:8889), let's learn it together.
+
+Demo:
+
+* sample maps
+
+* loading data
+
+* utf clickable grids
+
+* osm bright / imposm
+
+* apache bench testing
+
+* set up separate OpenLayers html to connect to running tilemill
+
+* getting out mapnik xml
+
+* export MBTiles / local tilestream
+
+
+# Part 3: Slow Maps / Fast Maps
+
+Dane lead.
+
+How to make slow maps: [slides](foss4g2011-lecture2-how-to-make-slow-maps.pdf)
+
+ * Common mistakes
+
+ * What not to do
+ 
+Principles of high performance map rendering performance: [slides](foss4g2011-lecture2-how-to-make-slow-maps.pdf)
+
+ * latency, scalability, and stability
+ 
+
+# Part 4: Deploying your maps
+
+Group Discussion.
+
+Deployment tools and servers:
+
+* [TileStream](http://tiles.mapbox.com/)
+* [TileStache](http://tilestache.org/)
+* [Invar](https://github.com/onyxfish/invar)
+* [MapProxy](http://mapproxy.org/)
+
+
+</textarea></p>
+
+
+<!--
+
+
+# TODO
+
+tilemill-maps link for setting up tilemill style with git
+ivan bio
+
+# other
+gdal/org
+polymaps/openlayers
+
+
+-->
+
+          
+          </div><!-- /.sidebar -->
+        
+        </div><!--/#content .site -->
+      </div><!-- /#wrapper -->
+      
+    <div class="push"></div>
+ 
+    <!-- FOOTER Begins -->
+    <div id="footer" >
+      <div class="lower_footer">
+        <div class="footer_inner clearfix">
+            <div> 
+            <p> Workshop by <a href="https://twitter.com/#!/springmeyer">Dane Springmeyer</a> and <a href="https://twitter.com/#!/Realivansanchez">Iván Sánchez Ortega</a></p><p></p>
+            </div>
+        </div><!-- /.site -->
+      </div><!-- /.lower_footer -->
+    </div><!-- /#footer -->
+
+  </body>
+</html>
